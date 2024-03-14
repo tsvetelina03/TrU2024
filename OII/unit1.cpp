@@ -3,11 +3,11 @@
 using namespace std;
 
 struct Node {
-    int data;
+    string data;
     Node* next;
 };
 
-Node* newNode(int data)
+Node* newNode(string data)
 {
     Node* new_node = new Node;
     new_node->data = data;
@@ -15,7 +15,7 @@ Node* newNode(int data)
     return new_node;
 }
 
-Node* insertEnd(Node* head, int data)
+Node* insertEnd(Node* head, string data)
 {
     if (head == NULL)
         return newNode(data);
@@ -35,11 +35,11 @@ void traverse(Node* head)
 int main()
 {
     Node* head = NULL;
-    head = insertEnd(head, 2);
-    head = insertEnd(head, 3);
-    head = insertEnd(head, 4);
-    head = insertEnd(head, 5);
-    head = insertEnd(head, 6);
+    head = insertEnd(head, "Plovdiv");
+    head = insertEnd(head, "Stara Zagora");
+    head = insertEnd(head, "Kazanluk");
+    head = insertEnd(head, "Karlovo");
+    head = insertEnd(head, "Kalofer");
     traverse(head);
 }
 
